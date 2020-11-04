@@ -4,12 +4,17 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import org.joda.time.DateTime;
+import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class MyListUtilTest {
 	
 	private static MyListUtil m;
+	public static DateTime d;
 	
 	@BeforeClass
 	public static void initialize () {
@@ -30,6 +35,14 @@ public class MyListUtilTest {
 		m.a.add(1);
 		m.a.add(1);
 		m.a.add(33);
+		
+		d = new DateTime();
+		System.out.println(d.now());
+	}
+	
+	@AfterClass
+	public static void actualTime() {
+		System.out.println(d.now());
 	}
 	
 	
@@ -44,5 +57,8 @@ public class MyListUtilTest {
 		assertEquals(Arrays.asList(0, 5, 12, 23), m.sortCrescente(m.lista));
 		assertEquals(Arrays.asList(0, 1, 1, 12, 33, 55, 91), m.sortCrescente(m.a));
 	}
+
+	
+		
 	
 }

@@ -1,21 +1,17 @@
 package INGSW.Esercitazione;
 
 import java.util.ArrayList;
+
+import org.joda.time.DateTime;
+import org.joda.time.JodaTimePermission;
 public class MyListUtil {
 	
 	public static ArrayList<Integer> lista;
 	public static ArrayList<Integer> a;
 	
 	public static void main(String[] args) {
-		
-		lista = new ArrayList<Integer>();
-		lista.add(5);
-		lista.add(12);
-		lista.add(0);
-		lista.add(23);
-
-		System.out.println(sortDecrescente(lista));
-		
+		//DateTime a = new DateTime();
+		//System.out.println(a.now());
 	}
 	
 
